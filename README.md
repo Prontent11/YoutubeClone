@@ -1,9 +1,11 @@
 # YoutubeClone
 
-In this app i have used Reactjs for frontend 
-Material UI Libray for desing ui
-Rapid API v3 youtube api for data
+I used Reactjs for the frontend of this app 
 
-If are cloning this application don't forget to create .env file in root folder and then create env vairable with name VITE_REACT_APP_API_KEY and then add your api key
+The Material UI Library was used to design the user interface
+
+Rapid API Youtube v3 for YouTube data
+
+If you are cloning this application, don't forget to create the .env file in the root folder and then create an environment variable called VITE_REACT_APP_API_KEY and add your API key.
 
 
