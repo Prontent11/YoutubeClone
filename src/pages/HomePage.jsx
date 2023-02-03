@@ -13,7 +13,7 @@ const HomePage = () => {
       setVideos(data.items)
     );
   }, [selectedCategory]);
-
+  console.log(videos);
   return (
     <Stack
       sx={{

@@ -2,9 +2,10 @@ import { CheckCircle } from "@mui/icons-material";
 import { Box, Typography, Stack } from "@mui/material";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Videos from "../components/Videos";
 import ReactPlayer from "react-player";
+import { fetchFromAPI } from "../fetchFromAPI";
 
 const VideoPage = () => {
   const { id } = useParams();
@@ -23,12 +24,12 @@ const VideoPage = () => {
       }
     );
   }, [id]);
-  if (video != null) {
-    const {
-      snippet: { title, channelId, channelTitle },
-      statistics: { viewCount, likeCount },
-    } = video;
-  }
+  if (!video?.snippet) return <>Loading...</>;
+  const {
+    snippet: { channelId, channelTitle },
+    statistics: { viewCount, likeCount },
+  } = video;
+
   return (
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
@@ -40,7 +41,7 @@ const VideoPage = () => {
               controls
             />
             <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
-              {title}
+              {channelTitle}
             </Typography>
             <Stack
               direction="row"

@@ -4,7 +4,7 @@ import ChannelCard from "./ChannelCard";
 import VideoCard from "./VideoCard";
 
 const Videos = ({ videos, direction }) => {
-  if (!videos?.lengtht) return "Loading....";
+  // if (!videos?.lengtht) return "Loading....";
   return (
     <Stack
       direction={direction || "row"}
