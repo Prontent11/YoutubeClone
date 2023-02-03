@@ -8,4 +8,5 @@ Rapid API Youtube v3 for YouTube data
 
 If you are cloning this application, don't forget to create the .env file in the root folder and then create an environment variable called VITE_REACT_APP_API_KEY and add your API key.
 
+link ->https://youtube-clone-200112.netlify.app/
 
